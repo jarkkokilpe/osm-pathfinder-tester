@@ -58,12 +58,12 @@ const LocationForm: React.FC<LocationFormProps> = ({
   };
 
   const inputStyle = {
-    color: 'white', // Text color
-    backgroundColor: '#333', // Background color
+    color: 'white',
+    backgroundColor: '#333',
   };
 
   const placeholderStyle = {
-    color: 'white', // Placeholder text color
+    color: 'white',
   };
 
   return (
