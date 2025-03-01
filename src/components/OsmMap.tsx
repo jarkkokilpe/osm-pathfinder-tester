@@ -4,9 +4,8 @@ import { Pathfinder } from 'osm-pathfinder';
 import { RawCoordinates, Coordinates } from 'osm-pathfinder/dist/types/interfaces';
 import LocationForm from './LocationForm';
 import 'leaflet/dist/leaflet.css';
-import { Container, Typography } from '@mui/material';
+import { Typography } from '@mui/material';
 import L from 'leaflet';
-//import markerIcon from './path/to/marker-icon.png'; 
 
 export interface CoordinatesL {
   lat: number;
@@ -51,12 +50,6 @@ const OSMMap: React.FC = () => {
       console.log('locations', allLocations);
       console.log('path', path);
       setRoute(path);
-
-      //const path = await finder.findPath(parsedLocations[0], parsedLocations[1]);
-      //setRoute(path);
-
-      //const corners = finder.getCurrentRectangle();
-      //setRectangle(corners);
     };
 
     fetchPath();
@@ -69,7 +62,7 @@ const OSMMap: React.FC = () => {
     'rgb(8, 132, 163)', 
     'rgb(11, 155, 192)', 
     'rgb(13, 178, 220)', 
-    'rgb(14, 207, 255)']; // Example gradient colors
+    'rgb(14, 207, 255)'];
 
   const createGradientPolylines = (positions: RawCoordinates, colors: string[]) => {
     const segmentLength = Math.floor(positions.length / colors.length);
